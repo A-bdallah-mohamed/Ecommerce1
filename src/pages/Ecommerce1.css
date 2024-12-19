@@ -1,0 +1,454 @@
+ header{
+height: 90px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 5px 25px;
+}
+.Ecommerce1-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header img{
+    max-height: 50px;
+    width: auto;
+}
+.Ecommerce1-Icon:hover{
+color: rgb(106, 106, 106);
+cursor: pointer;
+}
+.Ecommerce1-Icon{
+    font-size: 28px;
+}
+a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    gap: 10px;
+    font-weight: 500;
+}
+
+li{
+    cursor: default;
+    transition: all 0.2s ease;
+}
+li:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.Ecommerce1-MainSection{
+    height: 650px;
+    background-color: #f0e0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px  ;
+}
+.Ecommerce1-img1{
+    max-height: 100%;
+    opacity: 0;
+transition: all 0.5s ease; 
+transform:translateY(300px);
+}
+.Ecommerce1-img1inview{
+    max-height: 100%;
+    opacity: 1;
+transition: all 0.5s ease; 
+transform:translateY(0px); 
+}
+.Ecommerce1-MainSectionText{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.Ecommerce1-text1{
+font-size: 40px;
+margin: 0 0 10px 0;
+font-weight: 400;  
+opacity: 0;
+transition: all 0.5s ease; 
+transform:translateY(150px);
+}
+.Ecommerce1-text1inview{
+    font-size: 40px;
+    margin: 0 0 10px 0;
+    font-weight: 400;  
+    opacity: 1;
+    transition: all 0.5s ease; 
+    transform:translateY(0px);
+    transition-delay: 0.3s;
+    }
+.Ecommerce1-text2{
+    font-size: 80px;
+text-align: left;  
+font-family: "Afacad Flux", sans-serif;
+font-weight: 400; 
+opacity: 0;
+transition: all 0.5s ease; 
+transform:translateY(150px);
+}
+.Ecommerce1-text2inview{
+    font-size: 80px;
+    text-align: left;  
+    font-family: "Afacad Flux", sans-serif;
+    font-weight: 400; 
+    opacity: 1;
+    transition: all 0.5s ease; 
+    transform:translateY(0px);
+    transition-delay: 0.6s;
+}
+.Ecommerce1-button1{
+    border:1px solid black;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+transition: all 0.5s ease; 
+transform:translateY(100px);
+}
+.Ecommerce1-button1inview{
+    border:1px solid black;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    opacity: 1;
+    transition: all 0.4s ease;
+transform:translateY(0px);
+ 
+}
+.Ecommerce1-button1inview:hover{
+    background-color: rgb(117, 0, 195);
+    color: white;
+    transition: all 0.4s ease;
+}
+.Ecommerce1-Account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+.Ecommerce1-Nonmainsections{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+flex-direction: column;
+}
+.Ecommerce1-Feature{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 25px;
+}
+.Ecommerce1-Feature h6,.Ecommerce1-Feature h4{
+    margin: 0;
+}
+.Ecommerce1-FeatureIcon{
+    font-size: 40px;
+}
+.Ecommerce1-Bestsellers{
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px 0 0 0;
+}
+.Ecommerce1-Bestsellers::after,.Ecommerce1-Bestsellers::before{
+    content: "";
+    width: 120px;
+    border: 2px solid black;
+}
+.Ecommerce1-product{
+    width: 300px;
+    height: 500px;
+    background-color: whtie;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 10px gray;
+    transition: all 0.2s ease;
+}
+.producttext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    margin-top: 25px;
+    gap: 10px;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    max-width: 300px;
+
+}
+.producttext p{
+max-width: 300px;
+text-align: center;
+}
+.Ecommerce1-product:hover{
+    transform: translateZ(20px);
+    box-shadow: 1px 1px 40px gray;
+    transition: all 0.2s ease;
+}
+.Ecommerce1-product p{
+    font-size: 20px;
+    margin: 0;
+}
+.Ecommerce1-product span{
+font-weight: 400;
+color: black;
+font-size: 27px;
+font-weight: 500;
+display: flex;
+width: 250px;
+padding: 0 50px 0 50px;
+justify-content: space-between;
+align-items: center;
+}
+
+footer{
+    color: white;
+}
+button{
+    cursor: pointer;
+}
+.Ecommerce1-ProductImageContainer{
+width: 300;
+height: 380px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(237, 237, 237);
+cursor: pointer;
+}
+.Ecommerce1-ProductImageContainer img{
+    max-width: 100%;
+    height: auto;
+    max-height: 380px;
+
+}
+.Ecommerce1-Featuretext h4,.Ecommerce1-Featuretext h6{
+    font-weight: 300;
+}
+.Ecommerce1-BestSellersProducts{
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap; 
+    max-width: 1380px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 50px 0;
+}
+.ProductButtons{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#2ec7a8;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.ProductButtons:hover{
+    cursor: pointer;
+    background-color: #2ec7a87d;
+}
+.Ecommerce-footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 100px;
+    font-size: 30px;
+    padding: 0;
+    gap: 10px;
+}
+.Ecommerce-footer img{
+    max-height: 20px;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+.Ecommerce1-CategorieCard{
+    height: 300px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 10px gray;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+.Ecommerce1-CategorieCard:hover{
+    transform: translateZ(20px);
+    box-shadow: 1px 1px 40px gray;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.Ecommerce1-CategorieCardImage{
+width: 100%;
+height: 66%;
+border-radius: 10px;
+background-size: cover;
+}
+.Ecommerce1-CategorieCardText{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 33%;
+    font-size: 30px;
+    font-weight: bolder;
+    align-items: center;
+}
+.Ecommerce1-CategoriesSectionContainer{
+flex-direction: column;
+    max-width: 1380px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 0 0 20px 0;
+}
+.Ecommerce1-Features{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1380px;
+    height: auto;
+    padding: 50px 50px;
+    flex-wrap: wrap; 
+    overflow-wrap: break-word; 
+    gap: 15px;
+}
+.Ecommerce1-CategoriesSection{
+
+    max-width: 1380px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 0 0 20px 0;
+}
+.Ecommerce1-ProductButtons{
+    display: flex;
+    gap: 5px;
+}
+header input{
+    width: 300px;
+    padding: 0 15px;
+height: 40px;
+border-radius: 5px 0 0 5px;
+z-index: 10;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Ecommerce1-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-right: 50px;
+border: 1px solid black;
+border-radius: 6px;
+}
+input:focus {
+    border: none;
+    outline: none;
+}
+
+input{
+    border: none;
+
+}
+.Ecommerce1-SearchButton{
+    width: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(195, 195, 195);
+    border-radius: 0 5px 5px 0;
+    height: 43px;
+    cursor: pointer;
+    transition: 0.2s ease all;
+}
+.Ecommerce1-SearchButton:hover{
+    background-color: rgb(216, 216, 216);
+    transition: 0.2s ease all;
+}
+h1,h3,h4,p{
+    margin: 0;
+}
+.productpagecontainer{
+    display: flex;
+    padding: 60px 50px;
+    max-width: 1380px;
+    justify-content: center;
+    gap: 20px;
+}
+.productdetailscontainer{
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.productdetailscontainer h4{
+font-size: 36px;
+}
+.productdetailscontainer h3{
+    font-size: 26px;
+    font-weight: 400;
+    }
+    .productpricecontainer{
+        display: flex;
+        gap: 15px;
+
+    }
+    .productpagebuttons{
+        display: flex;
+    }
+    .BUTTON{
+     border: none;
+     background-color: rgb(52, 52, 52);
+        padding: 15px 25px;
+        font-weight: bolder;
+        font-size: 16px;
+        position: relative;
+        transition: all 0.3s ease;
+        color: white;
+    }
+    .BUTTON:hover{
+        color: white;
+        background-color: rgb(106, 106, 106);
+    }
