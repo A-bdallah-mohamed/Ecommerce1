@@ -5,6 +5,7 @@ import Ecommerce1Account from './pages/Ecommerce1Account';
 import {Products} from './database/db.jsx'
 import Ecommerce1productPage from './pages/Ecommerce1productPage.jsx';
 import ScrollToTop from './Custom hooks/ScrolltoTop.jsx';
+import Ecommerce1CategoryPage from './pages/Ecommerce1CategoryPage.jsx';
 function App() {
     const [categories,setcategories] = useState([])
     
@@ -23,7 +24,7 @@ function App() {
         <Route path={`/${product.name.replace(/\s+/g, '-')}`} element={<Ecommerce1productPage productt={product} />} key={index}/>
     ))}
         {categories.map((categorie,index) => (
-        <Route path={`/${categorie.replace(/\s+/g, '-')}`} element={<Ecommerce1productPage categorie={categorie} />} key={index}/>
+        <Route path={`/${categorie.replace(/\s+/g, '-')}`} element={<Ecommerce1CategoryPage categorie={categorie} />} key={index}/>
     ))}
   </Routes>
   </Router>

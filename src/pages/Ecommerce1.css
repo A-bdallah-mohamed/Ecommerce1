@@ -546,3 +546,6 @@ transition: all 0.3s ease;
         font-size: 26px;
         margin-top: 50px;
     }
+    a p{
+        color: black;
+    }

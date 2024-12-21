@@ -8,7 +8,9 @@ import { Link } from 'react-router-dom';
 export default function Ecommerce1Header() {
   return (
     <header>
+        <Link to='/'>
     <img src={Logo} alt='Logo-PlaceHolder'/>
+    </Link>
     <ul>
         <div className='Ecommerce1-input'>
 
