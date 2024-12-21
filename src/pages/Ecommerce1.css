@@ -183,14 +183,16 @@ flex-direction: column;
     border: 2px solid black;
 }
 .Ecommerce1-product{
-    width: 300px;
-    height: 500px;
+    width: 250px;
+    height: 400px;
     background-color: whtie;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 1px 1px 10px gray;
     transition: all 0.2s ease;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .producttext{
     display: flex;
@@ -198,11 +200,11 @@ flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 60px;
-    margin-top: 25px;
+    margin-top: 20px;
     gap: 10px;
     word-wrap: break-word; 
     overflow-wrap: break-word;
-    max-width: 300px;
+    max-width: 220px;
 
 }
 .producttext p{
@@ -224,7 +226,7 @@ color: black;
 font-size: 27px;
 font-weight: 500;
 display: flex;
-width: 250px;
+width: 220px;
 padding: 0 50px 0 50px;
 justify-content: space-between;
 align-items: center;
@@ -238,7 +240,7 @@ button{
 }
 .Ecommerce1-ProductImageContainer{
 width: 300;
-height: 380px;
+height: 300px;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -248,7 +250,7 @@ cursor: pointer;
 .Ecommerce1-ProductImageContainer img{
     max-width: 100%;
     height: auto;
-    max-height: 380px;
+    max-height: 300px;
 
 }
 .Ecommerce1-Featuretext h4,.Ecommerce1-Featuretext h6{
@@ -413,15 +415,29 @@ h1,h3,h4,p{
 }
 .productpagecontainer{
     display: flex;
+    flex-direction: column;
     padding: 60px 50px;
-    max-width: 1380px;
     justify-content: center;
     gap: 20px;
+    max-width: 1380px;
+    max-width: 90vw;
+}
+.productpagee{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productpage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 .productdetailscontainer{
     gap: 15px;
     display: flex;
     flex-direction: column;
+    width: 400px;
 }
 .productdetailscontainer h4{
 font-size: 36px;
@@ -435,12 +451,49 @@ font-size: 36px;
         gap: 15px;
 
     }
+    .productdetailscontainer p{
+        margin-top: 10px;
+    }
     .productpagebuttons{
         display: flex;
+        gap: 15px;
     }
+    .productimagescontainer{
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+height: 400;
+flex-direction: column;
+    }
+    .productimagescontainer img{
+max-height: 400px;
+        height: auto;
+    }
+    .imageselector{
+        display: flex;
+        width: 400px;
+
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+.imageselector img{
+    width: auto; 
+max-height: 90px;
+    object-fit: contain; 
+    border-radius: 4px;
+    border: 1px solid gray;
+    transition: all 0.3s ease;
+}
+.imageselector img:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
     .BUTTON{
      border: none;
-     background-color: rgb(52, 52, 52);
+     background-color: #343538;
         padding: 15px 25px;
         font-weight: bolder;
         font-size: 16px;
@@ -451,4 +504,45 @@ font-size: 36px;
     .BUTTON:hover{
         color: white;
         background-color: rgb(106, 106, 106);
+    }
+    .quantitiySelector{
+        display: flex;
+        padding: 15px 15px;
+        width: 80px;
+        border: 1px solid rgb(119, 119, 119);
+        border-radius: 2px;
+        justify-content: space-between;
+        font-size: 25px;
+    }
+    .favbutton{
+        cursor: pointer;
+        height: 66px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 66px;
+        border: 1px solid rgb(119, 119, 119);
+        border-radius: 2px;
+        font-size: 28px;
+        transition: all 0.3s ease;
+    }
+    .favbutton:hover{
+color: rgb(255, 77, 77);
+transition: all 0.3s ease;
+    }
+    .quantitiySelector p{
+        margin: 0;
+    }
+    .quantitiySelector span{
+        cursor: pointer;
+    }
+    .productcontainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .Youmayalsolike{
+        font-weight: 600;
+        font-size: 26px;
+        margin-top: 50px;
     }

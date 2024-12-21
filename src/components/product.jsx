@@ -4,7 +4,6 @@ import { FaHeart } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 export default function Product({productt}) {
-console.log(productt)
 const [name,setname] = useState('')
 useEffect(()=>{
   if(productt.name.length > 22){

@@ -1,4 +1,4 @@
-import React,{useRef} from 'react'
+import React,{useEffect, useRef} from 'react'
 import './Ecommerce1.css'
 import model from '../assets/model.png'
 import useIntersection from '../Custom hooks/UseIntersection';
@@ -12,6 +12,7 @@ import CategorySection from '../components/CategorySection';
 import BestSellersSection from '../components/BestSellersSection';
 import Ecommerce1Header from '../components/Ecommerce1Header';
 import Button from '../components/Button';
+import { Products } from '../database/db';
 export default function Ecommerce1() {
     const [text1 , istext1inview] = useIntersection(true)
     const [text2 , istext2inview] = useIntersection(true)
@@ -20,11 +21,11 @@ export default function Ecommerce1() {
     // Add categories before the best sellers section          ---------- Important
 
     //pages are 
-    //product page => header + product details quantity ,add to cart, fav, buy now + you might also like section + footer
     //all products page => header + all products displayed with a filter + footer 
     //cart menu popping up every where but with a view cart button drags you to cart page 
     // cart page => header + in cart products + footer
-
+    // sold out and prev price on product card ui 
+    
   return (
     <div className='Ecommerce1-container'>
 
