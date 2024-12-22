@@ -18,14 +18,20 @@ export default function Ecommerce1() {
     const [text2 , istext2inview] = useIntersection(true)
     const [img1 , isimg1inview] = useIntersection(true)
 
-    // Add categories before the best sellers section          ---------- Important
+
 
     //pages are 
-    //all products page => header + all products displayed with a filter + footer 
-    //cart menu popping up every where but with a view cart button drags you to cart page 
-    // cart page => header + in cart products + footer
     // sold out and prev price on product card ui 
     
+    //Whishlist => header + h1 "your wishlist items" + table with items + footer
+
+    //all products page => header + all products displayed with a filter + footer 
+
+    //cart menu popping up every where but with a view cart button drags you to cart page 
+    // cart page => header + in cart products + footer
+
+
+
   return (
     <div className='Ecommerce1-container'>
 

@@ -11,7 +11,7 @@ export default function CategorySection() {
           },[Products])
   
   return (
-<div className='Ecommerce1-CategoriesSectionContainer'>
+<div >
 <div className='Ecommerce1-Bestsellers'>
                 Categories
             </div>

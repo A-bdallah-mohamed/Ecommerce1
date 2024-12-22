@@ -20,14 +20,11 @@ export default function Ecommerce1Header() {
         <li>Home</li>
         <li>Shop</li>
         <li>Collection</li>
-        <li>Pages</li>
-        <li>Blog</li>
-        <li>About</li>
         <li>Contact</li>
     </ul>
     <div className='Ecommerce1-Account'>
 
-    <Link to='/MyAccount'><VscAccount className='Ecommerce1-Icon' title='My Account'/></Link>
+    <Link to='/Create-new-account'><VscAccount className='Ecommerce1-Icon' title='My Account'/></Link>
         <CiHeart className='Ecommerce1-Icon' style={{fontSize:'35px'}} title='Wishlist'/>
         <div className='Ecommerce1-Cart'>
             <SlBag className='Ecommerce1-Icon' title='Cart'/>

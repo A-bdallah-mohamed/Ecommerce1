@@ -9,7 +9,17 @@ export default function Ecommerce1productPage({productt}) {
     const Setindex = (index) => {
         setimageindex(index)
     }
-
+const [quantity,setquantity] = useState(1)
+const increasequantity = () => {
+    if(quantity < 12){
+        setquantity(q => q+1)
+    }
+}
+const decreasequantity = () => {
+    if(quantity > 1){
+        setquantity(q => q-1)
+    }
+}
   return (
     <div className='productpage'>
     <Ecommerce1Header />
@@ -30,9 +40,9 @@ export default function Ecommerce1productPage({productt}) {
             <p>{productt.description}</p>
             <div className='productpagebuttons'>
                 <div className='quantitiySelector'>
-                    <span>-</span>
-                    <p>1</p>
-                    <span>+</span>
+                    <span onClick={decreasequantity} style={{ cursor: quantity===1 && 'not-allowed'}}>-</span>
+                    <p>{quantity}</p>
+                    <span onClick={increasequantity} style={{ cursor: quantity===12 && 'not-allowed'}}>+</span>
                 </div>
                 <Button animation={false} text={'ADD TO CART'}/>
                 <div className='favbutton' title='Add to Favorite '><CiHeart /></div>
