@@ -17,8 +17,8 @@ export default function CategorySection() {
             </div>
             <div className='Ecommerce1-CategoriesSection'>
     {categories.map((categorie,index) => (
-      <Link to={`/${categorie.replace(/\s+/g, '-')}`} >
-  <div className='Ecommerce1-CategorieCard' key={index}>
+      <Link to={`/${categorie.replace(/\s+/g, '-')}`} key={index}>
+  <div className='Ecommerce1-CategorieCard' >
   <div className='Ecommerce1-CategorieCardImage' style={{backgroundImage:`url(${hoodieCategorie})`}} />
   <div className='Ecommerce1-CategorieCardText'>
       <p>{categorie}</p>

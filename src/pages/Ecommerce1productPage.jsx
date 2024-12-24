@@ -1,7 +1,6 @@
-import React,{useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import Ecommerce1Header from '../components/Ecommerce1Header'
 import Footer from '../components/Footer'
-import Button from '../components/Button';
 import { CiHeart } from "react-icons/ci";
 import Youmayalsolike from '../components/Youmayalsolike';
 export default function Ecommerce1productPage({productt}) {
@@ -11,7 +10,7 @@ export default function Ecommerce1productPage({productt}) {
     }
 const [quantity,setquantity] = useState(1)
 const increasequantity = () => {
-    if(quantity < 12){
+    if(quantity < 12 && quantity !== productt.instock){
         setquantity(q => q+1)
     }
 }
@@ -27,10 +26,10 @@ const decreasequantity = () => {
     <div className='productpagecontainer'>
         <div className='productcontainer'>
         <div className='productimagescontainer'>
-<img  src={productt.image[imageindex]} />
+<img  src={productt.image[imageindex]} alt={`${productt.name}`} />
 <div className='imageselector'>
     {productt.image.map((image,index)=> (
-        <img  src={image} key={index} className='imageselectorimages' onClick={()=>Setindex(index)}/>
+        <img  src={image} key={index} className='imageselectorimages' onClick={()=>Setindex(index)} alt={`${productt.name}`} />
     ))}
 </div>
         </div>
@@ -42,11 +41,12 @@ const decreasequantity = () => {
                 <div className='quantitiySelector'>
                     <span onClick={decreasequantity} style={{ cursor: quantity===1 && 'not-allowed'}}>-</span>
                     <p>{quantity}</p>
-                    <span onClick={increasequantity} style={{ cursor: quantity===12 && 'not-allowed'}}>+</span>
+                    <span onClick={increasequantity} style={{ cursor: productt.instock === 0 ? 'not-allowed' : quantity === productt.instock ? 'not-allowed' : quantity===12 && 'not-allowed'}}>+</span>
                 </div>
-                <Button animation={false} text={'ADD TO CART'}/>
+                <button className='BUTTON' disabled={productt.instock===0} style={{ cursor: productt.instock === 0 && 'not-allowed'}} onClick={()=>console.log('add to cart clicked')}>ADD TO CART</button>
                 <div className='favbutton' title='Add to Favorite '><CiHeart /></div>
                 </div>
+                {productt.instock === 0 ? <div className='soldoutproductpage'>Sold out</div> : productt.instock <= 5 && <div className='soldoutproductpage'>only {productt.instock} left in stock</div>}
         </div>
         </div>
         <Youmayalsolike Category={productt.category}/>

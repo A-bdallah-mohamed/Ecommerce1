@@ -194,7 +194,7 @@ flex-direction: column;
     box-shadow: 1px 1px 10px gray;
     transition: all 0.2s ease;
     border-radius: 10px;
-    overflow: hidden;
+    position: relative;
 }
 .producttext{
     display: flex;
@@ -265,7 +265,7 @@ cursor: pointer;
     max-width: 1380px;
     align-items: center;
     justify-content: center;
-    padding: 50px 0 50px 0;
+    padding: 50px 10px 50px 10px;
 }
 .ProductButtons{
     width: 40px;
@@ -366,6 +366,7 @@ flex-direction: column;
 .Ecommerce1-ProductButtons{
     display: flex;
     gap: 5px;
+    position: relative;
 }
 header input{
     width: 300px;
@@ -423,7 +424,10 @@ h1,h3,h4,p{
     justify-content: center;
     gap: 20px;
     max-width: 1380px;
-    max-width: 90vw;
+    width: 100%;
+}
+.productpagecontainer h1{
+    width: 100%;
 }
 .productpagee{
     width: 100%;
@@ -585,4 +589,29 @@ color: white;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .prices{
+        display: flex;
+        flex-direction: row;
+    gap: 5px;
+    }
+    .previousprice{
+        color: gray;
+        text-decoration: line-through;
+        font-size: 19px;
+    }
+    .soldout{
+        position: absolute;
+right: -10px;
+top: -10px;
+padding: 10px;
+background-color: rgb(255, 0, 0);
+color: white;
+border-radius: 100px;
+font-weight: bolder;
+box-shadow: 1px 1px 10px gray;
+font-size: 10px;
+    }
+    .soldoutproductpage{
+        color: red;
     }

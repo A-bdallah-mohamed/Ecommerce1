@@ -1,4 +1,4 @@
-import React,{useEffect, useRef} from 'react'
+import React from 'react'
 import './Ecommerce1.css'
 import model from '../assets/model.png'
 import useIntersection from '../Custom hooks/UseIntersection';
@@ -7,12 +7,11 @@ import { Ri24HoursFill } from "react-icons/ri";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { BiSolidOffer } from "react-icons/bi";
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
 import CategorySection from '../components/CategorySection';
 import BestSellersSection from '../components/BestSellersSection';
 import Ecommerce1Header from '../components/Ecommerce1Header';
 import Button from '../components/Button';
-import { Products } from '../database/db';
+
 export default function Ecommerce1() {
     const [text1 , istext1inview] = useIntersection(true)
     const [text2 , istext2inview] = useIntersection(true)
@@ -21,7 +20,6 @@ export default function Ecommerce1() {
 
 
     //pages are 
-    // sold out and prev price on product card ui 
     
     //Whishlist => header + h1 "your wishlist items" + table with items + footer
 
@@ -43,7 +41,7 @@ export default function Ecommerce1() {
                 <h1 ref={text2} className={`${istext2inview ? 'Ecommerce1-text2inview' : 'Ecommerce1-text2'}`}>Summer offer <br/> 2025 Collection</h1>
                <Button animation={true} text={'Shop now'}/>
             </div>
-<img src={model} ref={img1} className={`${isimg1inview ? 'Ecommerce1-img1inview' : 'Ecommerce1-img1'}`}/>
+<img src={model} ref={img1} className={`${isimg1inview ? 'Ecommerce1-img1inview' : 'Ecommerce1-img1'}`} alt={`"brand name"'s model`}/>
         </div>
         <div className='Ecommerce1-Nonmainsections'>
         <div className='Ecommerce1-Features'>

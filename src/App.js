@@ -7,21 +7,27 @@ import Ecommerce1productPage from './pages/Ecommerce1productPage.jsx';
 import ScrollToTop from './Custom hooks/ScrolltoTop.jsx';
 import Ecommerce1CategoryPage from './pages/Ecommerce1CategoryPage.jsx';
 import Alreadyhaveanaccount from './pages/Alreadyhaveanaccount.jsx';
+import Wishlist from './pages/Wishlist.jsx';
+import { AuthProvider } from './config/authcontext.jsx';
 function App() {
     const [categories,setcategories] = useState([])
     
     useEffect(()=>{
         const categories  = Array.from(new Set(Products.map(p => p.category)))
         setcategories(categories)
-        },[Products])
+        },[])
 
   return (
+    <React.StrictMode>
+      <AuthProvider >
+    
     <Router>
       <ScrollToTop />
     <Routes>
     <Route path='/' element={<Ecommerce1 />}/>
     <Route path='/Create-new-account' element={<Createnewaccount />}/>
     <Route path='/Log-in' element={<Alreadyhaveanaccount />}/>
+    <Route path='/WishList' element={<Wishlist />}/>
     {Products.map((product,index) => (
         <Route path={`/${product.name.replace(/\s+/g, '-')}`} element={<Ecommerce1productPage productt={product} />} key={index}/>
     ))}
@@ -30,6 +36,8 @@ function App() {
     ))}
   </Routes>
   </Router>
+  </AuthProvider >
+  </React.StrictMode>
   );
 }
 

@@ -25,7 +25,7 @@ export default function Ecommerce1Header() {
     <div className='Ecommerce1-Account'>
 
     <Link to='/Create-new-account'><VscAccount className='Ecommerce1-Icon' title='My Account'/></Link>
-        <CiHeart className='Ecommerce1-Icon' style={{fontSize:'35px'}} title='Wishlist'/>
+    <Link to='/WishList'><CiHeart className='Ecommerce1-Icon' style={{fontSize:'35px'}} title='Wishlist'/></Link>
         <div className='Ecommerce1-Cart'>
             <SlBag className='Ecommerce1-Icon' title='Cart'/>
         </div>
