@@ -35,7 +35,7 @@ const handleClearStorage = () => {
           <div className='prices'><div>{productt.price}</div>{productt.previousPrice && <sub className='previousprice'>{productt.previousPrice}</sub>} </div>
           <div className='Ecommerce1-ProductButtons'>
             <div className='ProductButtons' title='Add to Favourite' onClick={()=>AddtoFavourite(productt)}><FaHeart /></div>
-            <div className='ProductButtons' title='Add to Cart' ><FaPlus /></div>
+            <div className='ProductButtons' title='Add to Cart' onClick={handleClearStorage}><FaPlus /></div>
             </div>
             </span>
             </div>

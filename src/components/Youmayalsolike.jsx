@@ -1,22 +1,22 @@
 import React,{useEffect, useState} from 'react'
 import { Products } from '../database/db'
 import Product from './product'
-import { useSearchParams } from 'react-router-dom'
-
-export default function Youmayalsolike({Category}) {
-const [similarproducts,setsimilarproducts] = useState([])
+export default function Youmayalsolike({producttt}) {
+const [random,setrandom] = useState([])
 useEffect(()=> {
-const array = Products.filter(p => p.category === Category)
-const randomfour = array.sort(() => Math.random() - 0.5).slice(0,4)
-setsimilarproducts(randomfour)
-},[Category])
+
+const randomfour = Products.sort(() => Math.random() - 0.5).slice(0,4)
+setrandom(randomfour)
+console.log(randomfour)
+
+},[producttt])
   return (
      <div>
                      <p className='Youmayalsolike'>
                      You may also like
                      </p>
 <div className='Ecommerce1-BestSellersProducts'>
-{similarproducts.map((product,index) => (
+{random.map((product,index) => (
     <Product productt={product} key={index}/>
 ))}
 </div>

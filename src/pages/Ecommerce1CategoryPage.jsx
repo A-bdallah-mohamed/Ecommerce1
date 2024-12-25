@@ -2,16 +2,15 @@ import React, { useState,useEffect } from 'react'
 import { Products } from '../database/db'
 import Ecommerce1Header from '../components/Ecommerce1Header'
 import Footer from '../components/Footer'
-import BestSellersSection from '../components/BestSellersSection'
 import Product from '../components/product'
 export default function Ecommerce1CategoryPage({categorie}) {
 
     const [categories,setcategories] = useState([])
 
     useEffect(()=>{
-        const categories = Products.filter(p=> p.category == categorie)
+        const categories = Products.filter(p=> p.category === categorie)
         setcategories(categories)
-        },[Products])
+        },[categorie])
 
 
   return (

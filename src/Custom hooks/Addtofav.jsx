@@ -1,11 +1,13 @@
 
 import { useAuth } from '../config/authcontext'
+import useScrollToTop from './ScrolltoTop';
 export  function useAddtofav() {
-     const { currentUser, loading } = useAuth();
+    const scrollToTop = useScrollToTop();
+     const { currentUser } = useAuth();
 
      const AddtoFavourite = (producttt) => {
 
-        if(!currentUser){
+        if(currentUser == null){
             const key = "items";
             const existingArray = JSON.parse(localStorage.getItem(key)) || [];
 
@@ -15,10 +17,13 @@ export  function useAddtofav() {
                 localStorage.setItem(key, JSON.stringify(existingArray));
                 console.log("Item added:", producttt);
                 console.log("Updated array:", existingArray);
+                window.location.reload() 
+                scrollToTop()
             }
 else{
     console.log("item already in wishlist")
 }
+ //   const { currentUser, loading } = useAuth();
  //   {currentUser ? (
  //   <p>Welcome, {currentUser.displayName || currentUser.email}!</p>
  //    ) : (
@@ -26,6 +31,10 @@ else{
  //   )}
 
         }
+        else{
+
+        }
+
      }
   return AddtoFavourite;
 }

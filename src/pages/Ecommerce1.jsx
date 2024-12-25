@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './Ecommerce1.css'
 import model from '../assets/model.png'
 import useIntersection from '../Custom hooks/UseIntersection';
@@ -13,6 +13,7 @@ import Ecommerce1Header from '../components/Ecommerce1Header';
 import Button from '../components/Button';
 
 export default function Ecommerce1() {
+
     const [text1 , istext1inview] = useIntersection(true)
     const [text2 , istext2inview] = useIntersection(true)
     const [img1 , isimg1inview] = useIntersection(true)

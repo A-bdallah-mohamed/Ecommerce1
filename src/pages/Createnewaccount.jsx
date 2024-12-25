@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 export default function Createnewaccount() {
+
   return (
     <div className='Accountpage'>
 <div className='signinwindow'>

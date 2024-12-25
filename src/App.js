@@ -9,7 +9,10 @@ import Ecommerce1CategoryPage from './pages/Ecommerce1CategoryPage.jsx';
 import Alreadyhaveanaccount from './pages/Alreadyhaveanaccount.jsx';
 import Wishlist from './pages/Wishlist.jsx';
 import { AuthProvider } from './config/authcontext.jsx';
+import { useLocation } from "react-router-dom";
 function App() {
+
+
     const [categories,setcategories] = useState([])
     
     useEffect(()=>{
@@ -21,7 +24,7 @@ function App() {
     <React.StrictMode>
       <AuthProvider >
     
-    <Router>
+  
       <ScrollToTop />
     <Routes>
     <Route path='/' element={<Ecommerce1 />}/>
@@ -35,7 +38,7 @@ function App() {
         <Route path={`/${categorie.replace(/\s+/g, '-')}`} element={<Ecommerce1CategoryPage categorie={categorie} />} key={index}/>
     ))}
   </Routes>
-  </Router>
+
   </AuthProvider >
   </React.StrictMode>
   );

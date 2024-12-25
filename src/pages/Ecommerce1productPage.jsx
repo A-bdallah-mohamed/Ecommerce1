@@ -1,13 +1,12 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Ecommerce1Header from '../components/Ecommerce1Header'
 import Footer from '../components/Footer'
 import { CiHeart } from "react-icons/ci";
 import Youmayalsolike from '../components/Youmayalsolike';
 export default function Ecommerce1productPage({productt}) {
+
     const [imageindex,setimageindex] = useState(0)
-    const Setindex = (index) => {
-        setimageindex(index)
-    }
+
 const [quantity,setquantity] = useState(1)
 const increasequantity = () => {
     if(quantity < 12 && quantity !== productt.instock){
@@ -19,6 +18,9 @@ const decreasequantity = () => {
         setquantity(q => q-1)
     }
 }
+useEffect(()=> {
+    window.scrollTo(0, 0);
+},[productt])
   return (
     <div className='productpage'>
     <Ecommerce1Header />
@@ -28,8 +30,8 @@ const decreasequantity = () => {
         <div className='productimagescontainer'>
 <img  src={productt.image[imageindex]} alt={`${productt.name}`} />
 <div className='imageselector'>
-    {productt.image.map((image,index)=> (
-        <img  src={image} key={index} className='imageselectorimages' onClick={()=>Setindex(index)} alt={`${productt.name}`} />
+    {productt.image.map((image,indx)=> (
+        <img  src={image} key={indx} className={`imageselectorimages ${indx === imageindex && 'semitranspaerent'}`} onClick={()=>setimageindex(indx)} alt={`${productt.name}`} />
     ))}
 </div>
         </div>
@@ -49,7 +51,7 @@ const decreasequantity = () => {
                 {productt.instock === 0 ? <div className='soldoutproductpage'>Sold out</div> : productt.instock <= 5 && <div className='soldoutproductpage'>only {productt.instock} left in stock</div>}
         </div>
         </div>
-        <Youmayalsolike Category={productt.category}/>
+        <Youmayalsolike producttt={productt}/>
     </div>
 
     </div>
